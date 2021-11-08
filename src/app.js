@@ -13,8 +13,7 @@ import cron from 'node-cron';
 import fetch from 'node-fetch';
 
 const MongoClient = mongo.MongoClient;
-const uri =
-  'mongodb+srv://faysaljafry:faisal0341!@vuejs.yelyi.mongodb.net/vueJs?retryWrites=true&w=majority';
+const uri = process.env.MONGO_URI;
 var client;
 
 var mongoClient = new MongoClient(uri, {
