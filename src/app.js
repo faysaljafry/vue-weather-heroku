@@ -13,6 +13,7 @@ import cron from 'node-cron';
 import fetch from 'node-fetch';
 import path from 'path';
 import serveStatic from 'serve-static';
+const __dirname = path.resolve();
 
 const MongoClient = mongo.MongoClient;
 const uri = process.env.MONGO_URI;
