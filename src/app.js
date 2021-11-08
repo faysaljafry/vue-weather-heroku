@@ -217,5 +217,5 @@ cron.schedule(' * 2 * * *', async () => {
 });
 
 app.listen(process.env.PORT || 8083); // client is already running on 8080
-console.log(`app is listening on port: ${port}`);
+console.log(`app is listening on port: 8083`);
 //democron();
