@@ -4,13 +4,15 @@
 // const morgan = require('morgan');
 // const mongo = require('mongodb');
 // var cron = require('node-cron');
-import express, { response } from 'express';
+import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import morgan from 'morgan';
 import mongo from 'mongodb';
 import cron from 'node-cron';
 import fetch from 'node-fetch';
+import path from 'path';
+import serveStatic from 'serve-static';
 
 const MongoClient = mongo.MongoClient;
 const uri = process.env.MONGO_URI;
@@ -214,5 +216,5 @@ cron.schedule(' * 2 * * *', async () => {
 });
 
 app.listen(process.env.PORT || 8083); // client is already running on 8080
-
+console.log(`app is listening on port: ${port}`);
 //democron();
